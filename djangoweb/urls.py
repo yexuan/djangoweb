@@ -27,4 +27,6 @@ urlpatterns = [
     url(r'^ec$',ec),
     url(r'^articles/$', articles_views.latest_article),
     url(r'^meta/$', display_meta),
+    url(r'^search-form/$',articles_views.search_form),
+    url(r'^search/$',articles_views.search),
 ]

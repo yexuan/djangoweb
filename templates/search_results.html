@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<p>You searched for: <strong>{{ query }}</strong></p>
+
+{% if articles %}
+    <p>Found {{ articles|length }} article{{ articles|pluralize }}.</p>
+    <ul>
+        {% for article in articles %}
+        <li>{{ article.title }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No articles matched your search criteria.</p>
+{% endif %}
