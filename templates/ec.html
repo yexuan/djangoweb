@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title>ECharts</title>
     <!-- 引入 echarts.js -->
-    <script src="echarts.min.js"></script>
+    <script src="D:\\_proj\\djangoweb\\resource\\echarts.js"></script>
 </head>
 <body>
-    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 600px;height:400px;"></div>
-    <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 600px;height:400px;"></div>
+<script type="text/javascript">
+
         var myChart = echarts.init(document.getElementById('main'));
 
         option = {
@@ -35,7 +35,7 @@
           type: 'category',
           boundaryGap: false,
           data: ['6-9','6-10','6-11','6-12']
-          //data: [{{ mydict['days']|join(',') }}]
+
       },
       yAxis: {
           type: 'value',
@@ -66,6 +66,7 @@
 
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
-    </script>
+
+</script>
 </body>
 </html>

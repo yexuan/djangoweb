@@ -22,7 +22,7 @@ def ctime(req, num):
     content = t.render(c)
     return HttpResponse(content)
 
-def ec(req, num):
+def ec(req):
     t = template.Template(open("D:\\_proj\\djangoweb\\templates\\ec.html").read())
 
     return HttpResponse(t)
