@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from view import *
 from articles import views as articles_views
+from contact import views as contact_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -27,6 +28,7 @@ urlpatterns = [
     url(r'^ec$',ec),
     url(r'^articles/$', articles_views.latest_article),
     url(r'^meta/$', display_meta),
-    url(r'^search-form/$',articles_views.search_form),
     url(r'^search/$',articles_views.search),
+    url(r'^contact/$',contact_views.contact),
+    url(r'^contact/thanks/',contact_views.contact_thanks),
 ]
