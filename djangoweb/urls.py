@@ -25,10 +25,11 @@ urlpatterns = [
     url(r'^$',homepage),
     url(r'^time/(\d{1,2})/$',ctime),
     url(r'^ft$',first_template),
-    url(r'^ec$',ec),
+    url(r'^anlog$','contact.views.an_log'),
     url(r'^articles/$', articles_views.latest_article),
     url(r'^meta/$', display_meta),
     url(r'^search/$',articles_views.search),
     url(r'^contact/$',contact_views.contact),
     url(r'^contact/thanks/',contact_views.contact_thanks),
+    url(r'^home/$', 'contact.views.home', name='home'),
 ]
